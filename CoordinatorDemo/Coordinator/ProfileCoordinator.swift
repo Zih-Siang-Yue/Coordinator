@@ -19,7 +19,7 @@ final class ProfileCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     private let viewControllerFactory: ViewControllerFactory
     
     
-    // MARK: - Init
+    //MARK: - init
     init(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory

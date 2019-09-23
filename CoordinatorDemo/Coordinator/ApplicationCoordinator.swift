@@ -16,6 +16,12 @@ final class ApplicationCoordinator: BaseCoordinator {
     private var launchInstructor = LaunchInstructor.configure()
     private let viewControllerFactory: ViewControllerFactory = ViewControllerFactory()
     
+    //MARK: - init
+    init(router: Router, coordinatorFactory: CoordinatorFactory) {
+        self.router = router
+        self.coordinatorFactory = coordinatorFactory
+    }
+    
     // MARK: - Coordinator
     override func start(with option: DeepLinkOption?) {
         if option != nil {
@@ -34,7 +40,7 @@ final class ApplicationCoordinator: BaseCoordinator {
         let coordinator: AuthCoordinator = self.coordinatorFactory.makeAuthCoordinatorBox(router: self.router, coordinatorFactory: self.coordinatorFactory, viewControllerFactory: self.viewControllerFactory)
         coordinator.finishFlow = { [unowned self, unowned coordinator] in
             self.removeDependency(coordinator)
-            self.launchInstructor = LaunchInstructor.configure()
+            self.launchInstructor = LaunchInstructor.configure(tutorialWasShown: false, isAutorized: true)
             self.start()
         }
         self.addDependency(coordinator)
@@ -45,7 +51,7 @@ final class ApplicationCoordinator: BaseCoordinator {
         let coordinator: MainCoordinator = self.coordinatorFactory.makeMainCoordinatorBox(router: self.router, coordinatorFactory: CoordinatorFactory(), viewControllerFactory: ViewControllerFactory())
         coordinator.finishFlow = { [unowned self, unowned coordinator] in
             self.removeDependency(coordinator)
-            self.launchInstructor = LaunchInstructor.configure()
+            self.launchInstructor = LaunchInstructor.configure(tutorialWasShown: false, isAutorized: false)
             self.start()
         }
         self.addDependency(coordinator)
@@ -56,17 +62,11 @@ final class ApplicationCoordinator: BaseCoordinator {
         let coordinator: OnboardingCoordinator = self.coordinatorFactory.makeOnboardingCoordinatorBox(router: self.router, viewControllerFactory: ViewControllerFactory())
         coordinator.finishFlow = { [unowned self, unowned coordinator] in
             self.removeDependency(coordinator)
-            self.launchInstructor = LaunchInstructor.configure()
+            self.launchInstructor = LaunchInstructor.configure(tutorialWasShown: true, isAutorized: true)
             self.start()
         }
         self.addDependency(coordinator)
         coordinator.start()
-    }
-    
-    // MARK: - Init
-    init(router: Router, coordinatorFactory: CoordinatorFactory) {
-        self.router = router
-        self.coordinatorFactory = coordinatorFactory
     }
     
 }

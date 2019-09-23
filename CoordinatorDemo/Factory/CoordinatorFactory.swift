@@ -10,20 +10,24 @@ import Foundation
 
 final class CoordinatorFactory: CoordinatorFactoryProtocol {
     
-    // MARK: - CoordinatorFactoryProtocol
-    
     func makeAuthCoordinatorBox(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) -> AuthCoordinator {
-        let coordinator = AuthCoordinator(router: router, coordinatorFactory: coordinatorFactory, viewControllerFactory: viewControllerFactory)
-        return coordinator
+        return AuthCoordinator(router: router, coordinatorFactory: coordinatorFactory, viewControllerFactory: viewControllerFactory)
     }
     
     func makeMainCoordinatorBox(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) -> MainCoordinator {
-        let coordinator = MainCoordinator(router: router, coordinatorFactory: coordinatorFactory, viewControllerFactory: viewControllerFactory)
-        return coordinator
+        return MainCoordinator(router: router, coordinatorFactory: coordinatorFactory, viewControllerFactory: viewControllerFactory)
     }
     
     func makeOnboardingCoordinatorBox(router: RouterProtocol, viewControllerFactory: ViewControllerFactory) -> OnboardingCoordinator {
         return OnboardingCoordinator(router: router, viewControllerFactory: viewControllerFactory)
     }
     
+    func makeChangePwdCoordinatorBox(router: RouterProtocol, viewControllerFactory: ViewControllerFactory) -> ChangePwdCoordinator {
+        return ChangePwdCoordinator(router: router, viewControllerFactory: viewControllerFactory)
+    }
+    
+    func makeProfileCoordinatorBox(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) -> ProfileCoordinator {
+        return ProfileCoordinator(router: router, coordinatorFactory: coordinatorFactory, viewControllerFactory: viewControllerFactory)
+    }
+
 }

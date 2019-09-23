@@ -17,7 +17,6 @@
 		F05C92112330E3E6003DB2EB /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92102330E3E6003DB2EB /* BaseCoordinator.swift */; };
 		F05C92132330E6FC003DB2EB /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92122330E6FC003DB2EB /* ViewControllerFactory.swift */; };
 		F05C92152331CDD1003DB2EB /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92142331CDD1003DB2EB /* ApplicationCoordinator.swift */; };
-		F05C92172331D71C003DB2EB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92162331D71C003DB2EB /* Repository.swift */; };
 		F05C92192331D944003DB2EB /* UserDefault+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92182331D944003DB2EB /* UserDefault+subscript.swift */; };
 		F05C921B2331FBA2003DB2EB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C921A2331FBA2003DB2EB /* RouterProtocol.swift */; };
 		F05C921D2331FBEE003DB2EB /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C921C2331FBEE003DB2EB /* AuthCoordinator.swift */; };
@@ -43,6 +42,25 @@
 		F05C92542334B049003DB2EB /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92532334B049003DB2EB /* Presentable.swift */; };
 		F05C92562334B513003DB2EB /* UIViewController+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92552334B513003DB2EB /* UIViewController+Coordinator.swift */; };
 		F05C92582334B696003DB2EB /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92572334B696003DB2EB /* BaseViewControllerProtocol.swift */; };
+		F05C925B2334E132003DB2EB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C925A2334E132003DB2EB /* LoginViewModel.swift */; };
+		F05C925E2335D63D003DB2EB /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C925C2335D63D003DB2EB /* ProductTableViewCell.swift */; };
+		F05C925F2335D63D003DB2EB /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C925D2335D63D003DB2EB /* ProductTableViewCell.xib */; };
+		F05C92632335DE93003DB2EB /* UITableView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92622335DE92003DB2EB /* UITableView+Tools.swift */; };
+		F05C92652335DFC8003DB2EB /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92642335DFC8003DB2EB /* ClassNameProtocol.swift */; };
+		F05C92672335DFFC003DB2EB /* UITableViewCell+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92662335DFFC003DB2EB /* UITableViewCell+Tools.swift */; };
+		F05C926A2335E90D003DB2EB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C92692335E90D003DB2EB /* LoginViewController.xib */; };
+		F05C926D2335F475003DB2EB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C926C2335F475003DB2EB /* RegisterViewModel.swift */; };
+		F05C926F2335F5D3003DB2EB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C926E2335F5D3003DB2EB /* RegisterViewController.xib */; };
+		F05C92712336074C003DB2EB /* ChangePwdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92702336074C003DB2EB /* ChangePwdCoordinator.swift */; };
+		F05C9275233610CD003DB2EB /* ForgetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C9273233610CD003DB2EB /* ForgetPwdViewController.swift */; };
+		F05C9276233610CD003DB2EB /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C9274233610CD003DB2EB /* ForgetPwdViewController.xib */; };
+		F05C927C23361127003DB2EB /* NewPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C927A23361127003DB2EB /* NewPwdViewController.swift */; };
+		F05C927D23361127003DB2EB /* NewPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C927B23361127003DB2EB /* NewPwdViewController.xib */; };
+		F05C928023361514003DB2EB /* ForgetPwdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C927F23361514003DB2EB /* ForgetPwdViewModel.swift */; };
+		F05C928223361568003DB2EB /* NewPwdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C928123361568003DB2EB /* NewPwdViewModel.swift */; };
+		F05C9286233625D5003DB2EB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C9284233625D5003DB2EB /* OnboardingViewController.swift */; };
+		F05C9287233625D5003DB2EB /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C9285233625D5003DB2EB /* OnboardingViewController.xib */; };
+		F05C928C2336265F003DB2EB /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C928B2336265F003DB2EB /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +76,6 @@
 		F05C92102330E3E6003DB2EB /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		F05C92122330E6FC003DB2EB /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		F05C92142331CDD1003DB2EB /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		F05C92162331D71C003DB2EB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F05C92182331D944003DB2EB /* UserDefault+subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+subscript.swift"; sourceTree = "<group>"; };
 		F05C921A2331FBA2003DB2EB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		F05C921C2331FBEE003DB2EB /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
@@ -84,6 +101,25 @@
 		F05C92532334B049003DB2EB /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		F05C92552334B513003DB2EB /* UIViewController+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Coordinator.swift"; sourceTree = "<group>"; };
 		F05C92572334B696003DB2EB /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
+		F05C925A2334E132003DB2EB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F05C925C2335D63D003DB2EB /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		F05C925D2335D63D003DB2EB /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		F05C92622335DE92003DB2EB /* UITableView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Tools.swift"; sourceTree = "<group>"; };
+		F05C92642335DFC8003DB2EB /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		F05C92662335DFFC003DB2EB /* UITableViewCell+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Tools.swift"; sourceTree = "<group>"; };
+		F05C92692335E90D003DB2EB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F05C926C2335F475003DB2EB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		F05C926E2335F5D3003DB2EB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		F05C92702336074C003DB2EB /* ChangePwdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwdCoordinator.swift; sourceTree = "<group>"; };
+		F05C9273233610CD003DB2EB /* ForgetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewController.swift; sourceTree = "<group>"; };
+		F05C9274233610CD003DB2EB /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
+		F05C927A23361127003DB2EB /* NewPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPwdViewController.swift; sourceTree = "<group>"; };
+		F05C927B23361127003DB2EB /* NewPwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPwdViewController.xib; sourceTree = "<group>"; };
+		F05C927F23361514003DB2EB /* ForgetPwdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewModel.swift; sourceTree = "<group>"; };
+		F05C928123361568003DB2EB /* NewPwdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPwdViewModel.swift; sourceTree = "<group>"; };
+		F05C9284233625D5003DB2EB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F05C9285233625D5003DB2EB /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		F05C928B2336265F003DB2EB /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,31 +161,32 @@
 				F05C922B233219DA003DB2EB /* Protocol */,
 				F05C922D23321A3D003DB2EB /* Coordinator */,
 				F05C922C23321A07003DB2EB /* Factory */,
-				F05C92162331D71C003DB2EB /* Repository.swift */,
-				F05C92182331D944003DB2EB /* UserDefault+subscript.swift */,
 				F05C922A233219C3003DB2EB /* Main */,
 				F05C9229233219AF003DB2EB /* Auth */,
+				F05C9279233610F0003DB2EB /* ChangePwd */,
+				F05C928A2336263A003DB2EB /* Onboard */,
 				F05C923223322C9C003DB2EB /* Enum */,
-				F05C923923332A95003DB2EB /* BaseViewController.swift */,
+				F05C927223360F2A003DB2EB /* Base */,
 				F05C92502334AB75003DB2EB /* Utils */,
 				F05C92592334B6A4003DB2EB /* Router */,
 			);
 			path = CoordinatorDemo;
 			sourceTree = "<group>";
 		};
-		F05C9228233219A3003DB2EB /* Controller */ = {
+		F05C9228233219A3003DB2EB /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				F05C9224233218C1003DB2EB /* LoginViewController.swift */,
-				F05C9226233218FA003DB2EB /* RegisterViewController.swift */,
+				F05C926B2335E940003DB2EB /* LoginViewController */,
+				F05C928E233729E1003DB2EB /* RegisterViewController */,
 			);
-			path = Controller;
+			path = VC;
 			sourceTree = "<group>";
 		};
 		F05C9229233219AF003DB2EB /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				F05C9228233219A3003DB2EB /* Controller */,
+				F05C9228233219A3003DB2EB /* VC */,
+				F05C92682335E841003DB2EB /* VM */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -160,6 +197,7 @@
 				F05C9243233330DB003DB2EB /* VC */,
 				F05C9244233330E2003DB2EB /* VM */,
 				F05C924B2333505D003DB2EB /* Model */,
+				F05C92612335D650003DB2EB /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -173,6 +211,7 @@
 				F05C92472333317D003DB2EB /* ViewModelType.swift */,
 				F05C92532334B049003DB2EB /* Presentable.swift */,
 				F05C92572334B696003DB2EB /* BaseViewControllerProtocol.swift */,
+				F05C92642335DFC8003DB2EB /* ClassNameProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -195,6 +234,7 @@
 				F05C921C2331FBEE003DB2EB /* AuthCoordinator.swift */,
 				F05C923323322D14003DB2EB /* OnboardingCoordinator.swift */,
 				F05C921E2331FC6B003DB2EB /* ProfileCoordinator.swift */,
+				F05C92702336074C003DB2EB /* ChangePwdCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -257,6 +297,9 @@
 			children = (
 				F05C924E2334AB6F003DB2EB /* UIButton+Action.swift */,
 				F05C92552334B513003DB2EB /* UIViewController+Coordinator.swift */,
+				F05C92622335DE92003DB2EB /* UITableView+Tools.swift */,
+				F05C92662335DFFC003DB2EB /* UITableViewCell+Tools.swift */,
+				F05C92182331D944003DB2EB /* UserDefault+subscript.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,6 +310,137 @@
 				F05C92512334B000003DB2EB /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		F05C92602335D64A003DB2EB /* ProductTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F05C925C2335D63D003DB2EB /* ProductTableViewCell.swift */,
+				F05C925D2335D63D003DB2EB /* ProductTableViewCell.xib */,
+			);
+			path = ProductTableViewCell;
+			sourceTree = "<group>";
+		};
+		F05C92612335D650003DB2EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F05C92602335D64A003DB2EB /* ProductTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05C92682335E841003DB2EB /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				F05C925A2334E132003DB2EB /* LoginViewModel.swift */,
+				F05C926C2335F475003DB2EB /* RegisterViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		F05C926B2335E940003DB2EB /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F05C9224233218C1003DB2EB /* LoginViewController.swift */,
+				F05C92692335E90D003DB2EB /* LoginViewController.xib */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		F05C927223360F2A003DB2EB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F05C923923332A95003DB2EB /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F05C9277233610D8003DB2EB /* ForgetPwdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F05C9273233610CD003DB2EB /* ForgetPwdViewController.swift */,
+				F05C9274233610CD003DB2EB /* ForgetPwdViewController.xib */,
+			);
+			path = ForgetPwdViewController;
+			sourceTree = "<group>";
+		};
+		F05C9278233610E6003DB2EB /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F05C9277233610D8003DB2EB /* ForgetPwdViewController */,
+				F05C927E2336112D003DB2EB /* PwdViewController */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		F05C9279233610F0003DB2EB /* ChangePwd */ = {
+			isa = PBXGroup;
+			children = (
+				F05C9278233610E6003DB2EB /* VC */,
+				F05C928323361588003DB2EB /* VM */,
+			);
+			path = ChangePwd;
+			sourceTree = "<group>";
+		};
+		F05C927E2336112D003DB2EB /* PwdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F05C927A23361127003DB2EB /* NewPwdViewController.swift */,
+				F05C927B23361127003DB2EB /* NewPwdViewController.xib */,
+			);
+			path = PwdViewController;
+			sourceTree = "<group>";
+		};
+		F05C928323361588003DB2EB /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				F05C927F23361514003DB2EB /* ForgetPwdViewModel.swift */,
+				F05C928123361568003DB2EB /* NewPwdViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		F05C928823362616003DB2EB /* OnboardingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F05C9284233625D5003DB2EB /* OnboardingViewController.swift */,
+				F05C9285233625D5003DB2EB /* OnboardingViewController.xib */,
+			);
+			path = OnboardingViewController;
+			sourceTree = "<group>";
+		};
+		F05C92892336262D003DB2EB /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F05C928823362616003DB2EB /* OnboardingViewController */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		F05C928A2336263A003DB2EB /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				F05C92892336262D003DB2EB /* VC */,
+				F05C928D23362665003DB2EB /* VM */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		F05C928D23362665003DB2EB /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				F05C928B2336265F003DB2EB /* OnboardingViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		F05C928E233729E1003DB2EB /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F05C9226233218FA003DB2EB /* RegisterViewController.swift */,
+				F05C926E2335F5D3003DB2EB /* RegisterViewController.xib */,
+			);
+			path = RegisterViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,10 +502,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F05C91FD2330BFA1003DB2EB /* LaunchScreen.storyboard in Resources */,
+				F05C925F2335D63D003DB2EB /* ProductTableViewCell.xib in Resources */,
 				F05C91FA2330BFA1003DB2EB /* Assets.xcassets in Resources */,
+				F05C9287233625D5003DB2EB /* OnboardingViewController.xib in Resources */,
 				F05C923C23332C91003DB2EB /* ProductListViewController.xib in Resources */,
+				F05C927D23361127003DB2EB /* NewPwdViewController.xib in Resources */,
 				F05C92402333309F003DB2EB /* ProductDetailViewController.xib in Resources */,
+				F05C926A2335E90D003DB2EB /* LoginViewController.xib in Resources */,
 				F05C91F82330BF9F003DB2EB /* Main.storyboard in Resources */,
+				F05C9276233610CD003DB2EB /* ForgetPwdViewController.xib in Resources */,
+				F05C926F2335F5D3003DB2EB /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,30 +526,42 @@
 				F05C920D2330D63E003DB2EB /* CoordinatorFactory.swift in Sources */,
 				F05C91F52330BF9F003DB2EB /* ViewController.swift in Sources */,
 				F05C9225233218C1003DB2EB /* LoginViewController.swift in Sources */,
+				F05C926D2335F475003DB2EB /* RegisterViewModel.swift in Sources */,
 				F05C92362333212B003DB2EB /* ProductListViewController.swift in Sources */,
 				F05C921B2331FBA2003DB2EB /* RouterProtocol.swift in Sources */,
 				F05C92112330E3E6003DB2EB /* BaseCoordinator.swift in Sources */,
+				F05C92672335DFFC003DB2EB /* UITableViewCell+Tools.swift in Sources */,
 				F05C9238233321A3003DB2EB /* ProductListViewModel.swift in Sources */,
+				F05C928023361514003DB2EB /* ForgetPwdViewModel.swift in Sources */,
 				F05C921F2331FC6B003DB2EB /* ProfileCoordinator.swift in Sources */,
+				F05C92632335DE93003DB2EB /* UITableView+Tools.swift in Sources */,
+				F05C92652335DFC8003DB2EB /* ClassNameProtocol.swift in Sources */,
 				F05C924A23335047003DB2EB /* ProductModel.swift in Sources */,
 				F05C92582334B696003DB2EB /* BaseViewControllerProtocol.swift in Sources */,
 				F05C922F233227F6003DB2EB /* LaunchInstructor.swift in Sources */,
+				F05C9275233610CD003DB2EB /* ForgetPwdViewController.swift in Sources */,
+				F05C92712336074C003DB2EB /* ChangePwdCoordinator.swift in Sources */,
+				F05C928C2336265F003DB2EB /* OnboardingViewModel.swift in Sources */,
 				F05C92192331D944003DB2EB /* UserDefault+subscript.swift in Sources */,
-				F05C92172331D71C003DB2EB /* Repository.swift in Sources */,
 				F05C923123322C94003DB2EB /* DeepLinkOption.swift in Sources */,
 				F05C923A23332A95003DB2EB /* BaseViewController.swift in Sources */,
 				F05C921D2331FBEE003DB2EB /* AuthCoordinator.swift in Sources */,
 				F05C924F2334AB6F003DB2EB /* UIButton+Action.swift in Sources */,
 				F05C923F2333309F003DB2EB /* ProductDetailViewController.swift in Sources */,
 				F05C923423322D14003DB2EB /* OnboardingCoordinator.swift in Sources */,
+				F05C925B2334E132003DB2EB /* LoginViewModel.swift in Sources */,
+				F05C9286233625D5003DB2EB /* OnboardingViewController.swift in Sources */,
 				F05C92132330E6FC003DB2EB /* ViewControllerFactory.swift in Sources */,
 				F05C92482333317D003DB2EB /* ViewModelType.swift in Sources */,
 				F05C9227233218FA003DB2EB /* RegisterViewController.swift in Sources */,
 				F05C920F2330D65E003DB2EB /* CoordinatorFactoryProtocol.swift in Sources */,
 				F05C92212331FCCB003DB2EB /* MainCoordinator.swift in Sources */,
+				F05C928223361568003DB2EB /* NewPwdViewModel.swift in Sources */,
 				F05C92522334B000003DB2EB /* Router.swift in Sources */,
 				F05C92562334B513003DB2EB /* UIViewController+Coordinator.swift in Sources */,
 				F05C91F32330BF9F003DB2EB /* AppDelegate.swift in Sources */,
+				F05C925E2335D63D003DB2EB /* ProductTableViewCell.swift in Sources */,
+				F05C927C23361127003DB2EB /* NewPwdViewController.swift in Sources */,
 				F05C92152331CDD1003DB2EB /* ApplicationCoordinator.swift in Sources */,
 				F05C92542334B049003DB2EB /* Presentable.swift in Sources */,
 				F05C924623333115003DB2EB /* ProductDetailViewModel.swift in Sources */,

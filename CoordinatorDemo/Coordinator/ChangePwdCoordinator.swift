@@ -1,22 +1,21 @@
 //
-//  OnboardingCoordinator.swift
+//  ChangePwdCoordinator.swift
 //  CoordinatorDemo
 //
-//  Created by Sean.Yue on 2019/9/18.
+//  Created by Sean.Yue on 2019/9/21.
 //  Copyright © 2019 Sean.Yue. All rights reserved.
 //
 
 import Foundation
 
-final class OnboardingCoordinator: BaseCoordinator, CoordinatorFinishOutput {
+class ChangePwdCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     
     // MARK: - CoordinatorFinishOutput
     var finishFlow: (() -> Void)?
     
-    // MARK: - Vars & Lets
     private let router: RouterProtocol
     private let viewControllerFactory: ViewControllerFactory
-    
+
     //MARK: - init
     init(router: RouterProtocol, viewControllerFactory: ViewControllerFactory) {
         self.router = router
@@ -25,15 +24,23 @@ final class OnboardingCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     
     // MARK: - Coordinator
     override func start() {
-        self.showOnboardingVC()
+        self.showForgetPwdPage()
     }
     
     // MARK: - Private methods
-    private func showOnboardingVC() {
-        let vc = self.viewControllerFactory.instantiateOnboardingVC()
-        vc.skipAction = { [unowned self] in
+    private func showForgetPwdPage() {
+        let vc = self.viewControllerFactory.instantiateForgetPwdVC()
+        vc.gotoNextPage = { [unowned self] in
+            self.showNewPwdPage()
+        }
+        self.router.push(vc)
+    }
+    
+    private func showNewPwdPage() {
+        let vc = self.viewControllerFactory.instantiateNewPwdVC()
+        vc.changePwdAction = { [unowned self] in
             self.finishFlow?()
         }
-        self.router.setRootModule(vc, hideBar: true)
+        self.router.push(vc)
     }
 }

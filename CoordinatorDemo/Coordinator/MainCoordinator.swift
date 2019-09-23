@@ -19,7 +19,7 @@ final class MainCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     private let viewControllerFactory: ViewControllerFactory
     
     
-    // MARK: - Init
+    //MARK: - init
     init(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
@@ -37,7 +37,7 @@ final class MainCoordinator: BaseCoordinator, CoordinatorFinishOutput {
         vc.gotoDetailPage = { [unowned self] (model: ProductModel) -> Void  in
             self.showProductDetailVC(model: model)
         }
-        self.router.setRootModule(vc, hideBar: true)
+        self.router.setRootModule(vc, hideBar: false)
     }
     
     private func showProductDetailVC(model: ProductModel) {

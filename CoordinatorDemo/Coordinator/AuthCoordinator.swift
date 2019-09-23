@@ -10,7 +10,6 @@ import Foundation
 
 final class AuthCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     
-    
     // MARK: - CoordinatorFinishOutput
     var finishFlow: (() -> Void)?
     
@@ -19,41 +18,45 @@ final class AuthCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     private let coordinatorFactory: CoordinatorFactoryProtocol
     private let viewControllerFactory: ViewControllerFactory
 
-    // MARK: - Init
+    //MARK: - init
     init(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
         self.viewControllerFactory = viewControllerFactory
     }
     
+    override func start() {
+        self.showLoginViewController()
+    }
+    
     // MARK: - Private
     private func showLoginViewController() {
         let loginVC = self.viewControllerFactory.instantiateLoginVC()
-        loginVC.onLogin = { [unowned self] in
+        loginVC.loginAction = { [unowned self] in
             self.finishFlow?()
         }
-        loginVC.onRegister = { [unowned self] in
+        loginVC.registerAction = { [unowned self] in
             self.showRegisterViewController()
         }
-        loginVC.onChangePassword = { [unowned self, unowned loginVC] in
+        loginVC.changePwAction = { [unowned self, unowned loginVC] in
             self.showForgetPassword(module: loginVC)
         }
         self.router.setRootModule(loginVC, hideBar: true)
     }
     
     private func showRegisterViewController() {
-        let registerVC = self.viewControllerFactory.instantiateRegisterViewController()
-        registerVC.onBack = { [unowned self] in
+        let registerVC = self.viewControllerFactory.instantiateRegisterVC()
+        registerVC.registerAction = { [unowned self] in
             self.router.popModule()
         }
-        registerVC.onRegister = { [unowned self] in
-            self.router.popModule()
+        registerVC.closeAction = { [unowned self] in
+            self.router.dismissModule()
         }
-        self.router.push(registerVC)
+        self.router.present(registerVC, animated: true)//(registerVC)
     }
     
     private func showForgetPassword(module: LoginViewController) {
-        let coordinator = self.coordinatorFactory.makeChangePasswordCoordinatorBox(router: self.router, viewControllerFactory: self.viewControllerFactory)
+        let coordinator = self.coordinatorFactory.makeChangePwdCoordinatorBox(router: self.router, viewControllerFactory: self.viewControllerFactory)
         coordinator.finishFlow = { [unowned self, weak module, unowned coordinator] in
             self.removeDependency(coordinator)
             self.router.popToModule(module: module , animated: true)
