@@ -24,34 +24,34 @@ class ProductDetailViewController: BaseViewController, ProductDetailVCProtocol {
     public var goBack: (() -> Void)?
     
     //MARK: - private
-    private var viewModel: ProductDetailViewModelProtocol
+    private var viewModel: ProductDetailViewModel//ProductDetailViewModelProtocol?
     
     //MARK: - init
-    init(vm: ProductDetailViewModelProtocol) {
+    init(vm: ProductDetailViewModel) {
         self.viewModel = vm
-        super.init(nibName: "ProductDetailViewController", bundle: nil)
+        super.init(nibName: ProductDetailViewController.className, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.uiConfig()
-        
+        self.labelConfig()
+        self.btnConfig()
     }
     
-    private func uiConfig() {
-        guard let vm = self.viewModel as? ProductDetailViewModel else { return }
-        self.nameLabel.text = vm.output.titleStr
-        self.priceLabel.text = vm.output.priceStr
-        self.descLabel.text = vm.output.desc
+    private func labelConfig() {
+        self.nameLabel.text = self.viewModel.output.titleStr
+        self.priceLabel.text = self.viewModel.output.priceStr
+        self.descLabel.text = self.viewModel.output.desc
     }
     
     private func btnConfig() {
-        self.gobackBtn.actionHandle(controlEvents: .touchUpInside) { [unowned self] in
+        self.gobackBtn.layer.cornerRadius = 5.0
+        self.gobackBtn.actionHandle(controlEvents: .touchUpInside) { [unowned self] (_) in
             self.goBack?()
         }
     }

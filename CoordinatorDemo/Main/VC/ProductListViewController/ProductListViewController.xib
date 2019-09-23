@@ -12,30 +12,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="CoordinatorDemo" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="89e-bl-FGh" id="jAf-07-yFg"/>
+                <outlet property="tableView" destination="Za7-Y6-Zjg" id="omf-9Z-Jys"/>
+                <outlet property="view" destination="Tbg-b2-hVc" id="CZb-CN-Xrs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="hEs-hf-pa1">
-            <view key="view" contentMode="scaleToFill" id="fat-Gc-MOl">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89e-bl-FGh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tableView>
-                </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                <constraints>
-                    <constraint firstItem="Fgj-Mr-m9O" firstAttribute="bottom" secondItem="89e-bl-FGh" secondAttribute="bottom" id="3pR-bY-ds6"/>
-                    <constraint firstItem="89e-bl-FGh" firstAttribute="leading" secondItem="Fgj-Mr-m9O" secondAttribute="leading" id="7S6-EG-Ki1"/>
-                    <constraint firstItem="89e-bl-FGh" firstAttribute="top" secondItem="Fgj-Mr-m9O" secondAttribute="top" id="fFb-2e-Nfu"/>
-                    <constraint firstItem="Fgj-Mr-m9O" firstAttribute="trailing" secondItem="89e-bl-FGh" secondAttribute="trailing" id="m5K-cO-KSH"/>
-                </constraints>
-                <viewLayoutGuide key="safeArea" id="Fgj-Mr-m9O"/>
-            </view>
-            <point key="canvasLocation" x="-272" y="-47"/>
-        </viewController>
+        <view contentMode="scaleToFill" id="Tbg-b2-hVc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Za7-Y6-Zjg">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Za7-Y6-Zjg" firstAttribute="leading" secondItem="tNP-mN-Gmh" secondAttribute="leading" id="8qd-s2-TdC"/>
+                <constraint firstItem="tNP-mN-Gmh" firstAttribute="trailing" secondItem="Za7-Y6-Zjg" secondAttribute="trailing" id="O5K-UX-hjA"/>
+                <constraint firstItem="Za7-Y6-Zjg" firstAttribute="top" secondItem="tNP-mN-Gmh" secondAttribute="top" id="U2d-pD-oJR"/>
+                <constraint firstItem="tNP-mN-Gmh" firstAttribute="bottom" secondItem="Za7-Y6-Zjg" secondAttribute="bottom" id="nGX-pe-Ael"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="tNP-mN-Gmh"/>
+            <point key="canvasLocation" x="465" y="-48"/>
+        </view>
     </objects>
 </document>

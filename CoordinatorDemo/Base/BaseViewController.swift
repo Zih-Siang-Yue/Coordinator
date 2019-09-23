@@ -26,3 +26,7 @@ class BaseViewController: UIViewController {
     }
     
 }
+
+extension BaseViewController: ClassNameProtocol {
+    
+}
