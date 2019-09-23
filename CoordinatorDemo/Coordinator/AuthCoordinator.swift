@@ -47,12 +47,12 @@ final class AuthCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     private func showRegisterViewController() {
         let registerVC = self.viewControllerFactory.instantiateRegisterVC()
         registerVC.registerAction = { [unowned self] in
-            self.router.popModule()
+            self.router.dismissModule()
         }
         registerVC.closeAction = { [unowned self] in
             self.router.dismissModule()
         }
-        self.router.present(registerVC, animated: true)//(registerVC)
+        self.router.present(registerVC, animated: true)
     }
     
     private func showForgetPassword(module: LoginViewController) {
