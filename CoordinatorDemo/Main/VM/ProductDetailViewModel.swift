@@ -9,7 +9,9 @@
 import Foundation
 
 protocol ProductDetailViewModelProtocol: ViewModelType {
-    
+    var input: ProductDetailInput { get set }
+    var output: ProductDetailOutput { get set }
+    func transform()
 }
 
 struct ProductDetailInput {
@@ -28,14 +30,18 @@ class ProductDetailViewModel: ProductDetailViewModelProtocol {
     typealias Output = ProductDetailOutput
     
     //MARK: - public
-    private var input: Input
-    public let output: Output
+    var input: Input
+    var output: Output
     
     init(input: Input) {
         self.input = input
         self.output = Output(titleStr: input.productModel.productName,
                              priceStr: String(input.productModel.productPrice),
                              desc: input.productModel.productDesc)
+    }
+    
+    func transform() {
+        //...
     }
     
 }
