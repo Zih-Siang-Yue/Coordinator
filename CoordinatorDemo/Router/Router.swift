@@ -11,19 +11,24 @@ import UIKit
 final class Router: NSObject, RouterProtocol {
     
     // MARK: - Vars & Lets
-    
     private weak var rootController: UINavigationController?
     private var completions: [UIViewController : () -> Void]
     private var transition: UIViewControllerAnimatedTransitioning?
     
-    // MARK: - Presentable
+    //MARK: - init methods
+    init(rootController: UINavigationController) {
+        self.rootController = rootController
+        self.completions = [:]
+        super.init()
+        self.rootController?.delegate = self
+    }
     
+    // MARK: - Presentable
     func toPresent() -> UIViewController? {
         return self.rootController
     }
     
     // MARK: - RouterProtocol
-    
     func present(_ module: Presentable?) {
         present(module, animated: true)
     }
@@ -110,20 +115,10 @@ final class Router: NSObject, RouterProtocol {
     }
     
     // MARK: - Private methods
-    
     private func runCompletion(for controller: UIViewController) {
         guard let completion = self.completions[controller] else { return }
         completion()
         completions.removeValue(forKey: controller)
-    }
-    
-    // MARK: - Init methods
-    
-    init(rootController: UINavigationController) {
-        self.rootController = rootController
-        self.completions = [:]
-        super.init()
-        self.rootController?.delegate = self
     }
 }
 
