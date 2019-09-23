@@ -8,22 +8,40 @@
 
 import UIKit
 
+typealias UIButtonTargetClosure = (UIButton) -> ()
+
+class ClosureWrapper: NSObject {
+    let closure: UIButtonTargetClosure
+    init(_ closure: @escaping UIButtonTargetClosure) {
+        self.closure = closure
+    }
+}
+
 extension UIButton {
-    struct Temp {
-        static var action :(() -> Void)?
+
+    private struct AssociatedKeys {
+        static var targetClosure = "targetClosure"
     }
     
-    private func actionHandler(action: (() -> Void)? = nil) {
-        if action != nil { Temp.action = action }
-        else { Temp.action?() }
+    private var targetClosure: UIButtonTargetClosure? {
+        get {
+            guard let closureWrapper = objc_getAssociatedObject(self, &AssociatedKeys.targetClosure) as? ClosureWrapper else { return nil }
+            return closureWrapper.closure
+        }
+        set(newValue) {
+            guard let newValue = newValue else { return }
+            objc_setAssociatedObject(self, &AssociatedKeys.targetClosure, ClosureWrapper(newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
     
-    @objc private func triggerActionHandler() {
-        self.actionHandler()
+    func actionHandle(controlEvents event: UIControl.Event, ForAction action: @escaping UIButtonTargetClosure) {
+        self.targetClosure = action
+        self.addTarget(self, action: #selector(UIButton.closureAction), for: event)
     }
     
-    func actionHandle(controlEvents control :UIControl.Event, ForAction action:@escaping () -> Void) {
-        self.actionHandler(action: action)
-        self.addTarget(self, action: #selector(triggerActionHandler), for: control)
+    @objc func closureAction() {
+        guard let targetClosure = targetClosure else { return }
+        targetClosure(self)
     }
+    
 }
