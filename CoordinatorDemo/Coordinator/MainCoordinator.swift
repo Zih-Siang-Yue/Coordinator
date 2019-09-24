@@ -43,8 +43,8 @@ final class MainCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     private func showProductDetailVC(model: ProductModel) {
         let input = ProductDetailInput(productModel: model)
         let vc = self.viewControllerFactory.instantiateProductDetailVC(input: input)
-        vc.goBack = { [unowned self] in
-            self.router.popModule()
+        vc.logoutAction = { [unowned self] in
+            self.finishFlow?()
         }
         self.router.push(vc)
     }
