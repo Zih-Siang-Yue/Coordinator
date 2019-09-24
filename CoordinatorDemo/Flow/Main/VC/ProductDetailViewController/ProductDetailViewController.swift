@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductDetailVCProtocol: BaseViewControllerProtocol {
-    var goBack: (() -> Void)? { get set }
+    var logoutAction: (() -> Void)? { get set }
 }
 
 class ProductDetailViewController: BaseViewController, ProductDetailVCProtocol {
@@ -18,11 +18,11 @@ class ProductDetailViewController: BaseViewController, ProductDetailVCProtocol {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var gobackBtn: UIButton!
+    @IBOutlet weak var logoutBtn: UIButton!
     
     //MARK: - public
-    public var goBack: (() -> Void)?
-    
+    public var logoutAction: (() -> Void)?
+
     //MARK: - private
     private var viewModel: ProductDetailViewModel//ProductDetailViewModelProtocol?
     
@@ -50,9 +50,9 @@ class ProductDetailViewController: BaseViewController, ProductDetailVCProtocol {
     }
     
     private func btnConfig() {
-        self.gobackBtn.layer.cornerRadius = 5.0
-        self.gobackBtn.actionHandle(controlEvents: .touchUpInside) { [unowned self] (_) in
-            self.goBack?()
+        self.logoutBtn.layer.cornerRadius = 5.0
+        self.logoutBtn.actionHandle(controlEvents: .touchUpInside) { [unowned self] (_) in
+            self.logoutAction?()
         }
     }
 }

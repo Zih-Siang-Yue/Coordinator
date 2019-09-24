@@ -159,14 +159,11 @@
 				F05C91FB2330BFA1003DB2EB /* LaunchScreen.storyboard */,
 				F05C91FE2330BFA1003DB2EB /* Info.plist */,
 				F05C922B233219DA003DB2EB /* Protocol */,
+				F05C927223360F2A003DB2EB /* Base */,
 				F05C922D23321A3D003DB2EB /* Coordinator */,
 				F05C922C23321A07003DB2EB /* Factory */,
-				F05C922A233219C3003DB2EB /* Main */,
-				F05C9229233219AF003DB2EB /* Auth */,
-				F05C9279233610F0003DB2EB /* ChangePwd */,
-				F05C928A2336263A003DB2EB /* Onboard */,
+				F0E80F52233A01EF00808912 /* Flow */,
 				F05C923223322C9C003DB2EB /* Enum */,
-				F05C927223360F2A003DB2EB /* Base */,
 				F05C92502334AB75003DB2EB /* Utils */,
 				F05C92592334B6A4003DB2EB /* Router */,
 			);
@@ -441,6 +438,17 @@
 				F05C926E2335F5D3003DB2EB /* RegisterViewController.xib */,
 			);
 			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		F0E80F52233A01EF00808912 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				F05C922A233219C3003DB2EB /* Main */,
+				F05C9229233219AF003DB2EB /* Auth */,
+				F05C9279233610F0003DB2EB /* ChangePwd */,
+				F05C928A2336263A003DB2EB /* Onboard */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
