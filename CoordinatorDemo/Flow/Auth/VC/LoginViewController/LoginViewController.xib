@@ -64,7 +64,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coord" translatesAutoresizingMaskIntoConstraints="NO" id="X6E-8V-52p">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coord" translatesAutoresizingMaskIntoConstraints="NO" id="X6E-8V-52p">
                     <rect key="frame" x="50" y="259.5" width="314" height="198"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-iu-fPj">
@@ -126,6 +126,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Coord" width="908" height="274"/>
+        <image name="Coord" width="600" height="381"/>
     </resources>
 </document>
