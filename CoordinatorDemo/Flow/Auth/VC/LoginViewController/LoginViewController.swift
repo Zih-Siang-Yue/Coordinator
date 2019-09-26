@@ -11,7 +11,7 @@ import UIKit
 protocol LoginViewControllerProtocol: class {
     var loginAction: (() -> Void)? { get set }
     var registerAction: (() -> Void)? { get set }
-    var changePwAction: (() -> Void)? { get set }
+    var forgetPwAction: (() -> Void)? { get set }
 }
 
 class LoginViewController: BaseViewController, LoginViewControllerProtocol {
@@ -23,7 +23,7 @@ class LoginViewController: BaseViewController, LoginViewControllerProtocol {
     // MARK: - LoginViewControllerProtocol
     var loginAction: (() -> Void)?
     var registerAction: (() -> Void)?
-    var changePwAction: (() -> Void)?
+    var forgetPwAction: (() -> Void)?
     
     private var viewModel: LoginViewModel//LoginViewModelProtocol?
     
@@ -64,7 +64,7 @@ class LoginViewController: BaseViewController, LoginViewControllerProtocol {
         }
         
         self.forgetPwBtn.actionHandle(controlEvents: .touchUpInside) { [unowned self] (_) in
-            self.changePwAction?()
+            self.forgetPwAction?()
         }
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ChangePwdCoordinator: BaseCoordinator, CoordinatorFinishOutput {
+class ForgetPwdCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     
     // MARK: - CoordinatorFinishOutput
     var finishFlow: (() -> Void)?

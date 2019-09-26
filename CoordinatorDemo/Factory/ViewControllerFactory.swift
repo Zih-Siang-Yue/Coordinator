@@ -37,7 +37,7 @@ class ViewControllerFactory {
         return ProductDetailViewController(vm: vm)
     }
     
-    //MARK: - Change Pwd
+    //MARK: - Forget Pwd
     func instantiateForgetPwdVC() -> ForgetPwdViewController {
         let vm = ForgetPwdViewModel()
         return ForgetPwdViewController(vm: vm)

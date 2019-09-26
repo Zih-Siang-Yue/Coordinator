@@ -31,7 +31,7 @@ final class ProfileCoordinator: BaseCoordinator, CoordinatorFinishOutput {
         //
     }
 //    private func showForgetPassword(module: ProfileViewController) {
-//        let coordinator = self.coordinatorFactory.makeChangePasswordCoordinatorBox(router: self.router, viewControllerFactory: self.viewControllerFactory)
+//        let coordinator = self.coordinatorFactory.makeForgetPasswordCoordinatorBox(router: self.router, viewControllerFactory: self.viewControllerFactory)
 //        coordinator.finishFlow = { [unowned self, weak module, unowned coordinator] in
 //            self.removeDependency(coordinator)
 //            self.router.popToModule(module: module , animated: true)

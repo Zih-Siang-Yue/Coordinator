@@ -38,7 +38,7 @@ final class AuthCoordinator: BaseCoordinator, CoordinatorFinishOutput {
         loginVC.registerAction = { [unowned self] in
             self.showRegisterViewController()
         }
-        loginVC.changePwAction = { [unowned self, unowned loginVC] in
+        loginVC.forgetPwAction = { [unowned self, unowned loginVC] in
             self.showForgetPassword(module: loginVC)
         }
         self.router.setRootModule(loginVC, hideBar: true)
@@ -56,7 +56,7 @@ final class AuthCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     }
     
     private func showForgetPassword(module: LoginViewController) {
-        let coordinator = self.coordinatorFactory.makeChangePwdCoordinatorBox(router: self.router, viewControllerFactory: self.viewControllerFactory)
+        let coordinator = self.coordinatorFactory.makeForgetPwdCoordinatorBox(router: self.router, viewControllerFactory: self.viewControllerFactory)
         coordinator.finishFlow = { [unowned self, weak module, unowned coordinator] in
             self.removeDependency(coordinator)
             self.router.popToModule(module: module , animated: true)

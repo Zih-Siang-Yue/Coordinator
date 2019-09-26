@@ -22,8 +22,8 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
         return OnboardingCoordinator(router: router, viewControllerFactory: viewControllerFactory)
     }
     
-    func makeChangePwdCoordinatorBox(router: RouterProtocol, viewControllerFactory: ViewControllerFactory) -> ChangePwdCoordinator {
-        return ChangePwdCoordinator(router: router, viewControllerFactory: viewControllerFactory)
+    func makeForgetPwdCoordinatorBox(router: RouterProtocol, viewControllerFactory: ViewControllerFactory) -> ForgetPwdCoordinator {
+        return ForgetPwdCoordinator(router: router, viewControllerFactory: viewControllerFactory)
     }
     
     func makeProfileCoordinatorBox(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) -> ProfileCoordinator {

@@ -51,7 +51,7 @@
 		F05C926A2335E90D003DB2EB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C92692335E90D003DB2EB /* LoginViewController.xib */; };
 		F05C926D2335F475003DB2EB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C926C2335F475003DB2EB /* RegisterViewModel.swift */; };
 		F05C926F2335F5D3003DB2EB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C926E2335F5D3003DB2EB /* RegisterViewController.xib */; };
-		F05C92712336074C003DB2EB /* ChangePwdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92702336074C003DB2EB /* ChangePwdCoordinator.swift */; };
+		F05C92712336074C003DB2EB /* ForgetPwdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C92702336074C003DB2EB /* ForgetPwdCoordinator.swift */; };
 		F05C9275233610CD003DB2EB /* ForgetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C9273233610CD003DB2EB /* ForgetPwdViewController.swift */; };
 		F05C9276233610CD003DB2EB /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05C9274233610CD003DB2EB /* ForgetPwdViewController.xib */; };
 		F05C927C23361127003DB2EB /* NewPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C927A23361127003DB2EB /* NewPwdViewController.swift */; };
@@ -110,7 +110,7 @@
 		F05C92692335E90D003DB2EB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		F05C926C2335F475003DB2EB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F05C926E2335F5D3003DB2EB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		F05C92702336074C003DB2EB /* ChangePwdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwdCoordinator.swift; sourceTree = "<group>"; };
+		F05C92702336074C003DB2EB /* ForgetPwdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdCoordinator.swift; sourceTree = "<group>"; };
 		F05C9273233610CD003DB2EB /* ForgetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewController.swift; sourceTree = "<group>"; };
 		F05C9274233610CD003DB2EB /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
 		F05C927A23361127003DB2EB /* NewPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPwdViewController.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 				F05C921C2331FBEE003DB2EB /* AuthCoordinator.swift */,
 				F05C923323322D14003DB2EB /* OnboardingCoordinator.swift */,
 				F05C921E2331FC6B003DB2EB /* ProfileCoordinator.swift */,
-				F05C92702336074C003DB2EB /* ChangePwdCoordinator.swift */,
+				F05C92702336074C003DB2EB /* ForgetPwdCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -548,7 +548,7 @@
 				F05C92582334B696003DB2EB /* BaseViewControllerProtocol.swift in Sources */,
 				F05C922F233227F6003DB2EB /* LaunchInstructor.swift in Sources */,
 				F05C9275233610CD003DB2EB /* ForgetPwdViewController.swift in Sources */,
-				F05C92712336074C003DB2EB /* ChangePwdCoordinator.swift in Sources */,
+				F05C92712336074C003DB2EB /* ForgetPwdCoordinator.swift in Sources */,
 				F05C928C2336265F003DB2EB /* OnboardingViewModel.swift in Sources */,
 				F05C92192331D944003DB2EB /* UserDefault+subscript.swift in Sources */,
 				F05C923123322C94003DB2EB /* DeepLinkOption.swift in Sources */,
