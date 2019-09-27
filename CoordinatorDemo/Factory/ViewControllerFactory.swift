@@ -8,8 +8,33 @@
 
 import UIKit
 
+protocol AuthVCFactoryProtocol {
+    func instantiateLoginVC() -> LoginViewController
+    func instantiateRegisterVC() -> RegisterViewController
+}
+
+protocol OnboardVCFactoryProtocol {
+    func instantiateOnboardingVC() -> OnboardingViewController
+}
+
+protocol MainVCFactoryProtocol {
+    func instantiateProductListVC() -> ProductListViewController
+    func instantiateProductDetailVC(input: ProductDetailInput) -> ProductDetailViewController
+}
+
+protocol ForgetPwdVCFactoryProtocol {
+    func instantiateForgetPwdVC() -> ForgetPwdViewController
+    func instantiateNewPwdVC() -> NewPwdViewController
+}
+
 class ViewControllerFactory {
-    //MARK: - Auth
+    //MARK: - Profile
+//    func instantiateProfileVC() -> ProfileViewController {
+//
+//    }
+}
+
+extension ViewControllerFactory: AuthVCFactoryProtocol {
     func instantiateLoginVC() -> LoginViewController {
         let vm = LoginViewModel(input: LoginInput())
         return LoginViewController(vm: vm)
@@ -19,14 +44,16 @@ class ViewControllerFactory {
         let vm = RegisterViewModel(input: RegisterInput())
         return RegisterViewController(vm: vm)
     }
-    
-    //MARK: - Onboard
+}
+
+extension ViewControllerFactory: OnboardVCFactoryProtocol {
     func instantiateOnboardingVC() -> OnboardingViewController {
         let vm = OnboardingViewModel()
         return OnboardingViewController(vm: vm)
     }
-    
-    //MARK: - Main
+}
+
+extension ViewControllerFactory: MainVCFactoryProtocol {
     func instantiateProductListVC() -> ProductListViewController {
         let vm = ProductListViewModel(input: ProductListInput())
         return ProductListViewController(vm: vm)
@@ -36,8 +63,9 @@ class ViewControllerFactory {
         let vm = ProductDetailViewModel(input: input)
         return ProductDetailViewController(vm: vm)
     }
-    
-    //MARK: - Forget Pwd
+}
+
+extension ViewControllerFactory: ForgetPwdVCFactoryProtocol {
     func instantiateForgetPwdVC() -> ForgetPwdViewController {
         let vm = ForgetPwdViewModel()
         return ForgetPwdViewController(vm: vm)
@@ -47,10 +75,4 @@ class ViewControllerFactory {
         let vm = NewPwdViewModel()
         return NewPwdViewController(vm: vm)
     }
-    
-    //MARK: - Profile
-//    func instantiateProfileVC() -> ProfileViewController {
-//
-//    }
 }
-
